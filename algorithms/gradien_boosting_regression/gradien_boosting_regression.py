@@ -4,6 +4,10 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
+import time
+
+# Save the start time of the file execution
+start_time = time.time()
 
 # Load cleaned dataset
 df = pd.read_csv('../../dataset/cleaned_dataset.csv')
@@ -37,6 +41,8 @@ plt.xlabel('Actual Values')
 plt.ylabel('Predicted Values')
 
 # Save the confusion_matrix file as png
-plt.savefig('./Gradient_Boosting_Regression.png')
+plt.savefig('./confusion_matrix.png')
 
 plt.show()
+
+print("--- %s seconds ---" % (time.time() - start_time))

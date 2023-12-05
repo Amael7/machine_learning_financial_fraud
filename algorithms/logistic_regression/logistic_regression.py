@@ -4,6 +4,10 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+import time
+
+# Save the start time of the file execution
+start_time = time.time()
 
 # Create DataFrame by reading the dataset_1.csv
 df = pd.read_csv('../../dataset/cleaned_dataset.csv')
@@ -48,3 +52,5 @@ plt.savefig('./confusion_matrix.png')
 
 # Show the confusion_matrix
 plt.show()
+
+print("--- %s seconds ---" % (time.time() - start_time))

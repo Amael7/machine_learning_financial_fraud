@@ -4,6 +4,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
+import time
+
+# Save the start time of the file execution
+start_time = time.time()
 
 # Load cleaned dataset
 df = pd.read_csv('../../dataset/cleaned_dataset.csv')
@@ -52,3 +56,6 @@ plt.savefig('./confusion_matrix.png')
 
 # Show the confusion_matrix
 plt.show()
+
+print("--- %s seconds ---" % (time.time() - start_time))
+

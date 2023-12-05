@@ -11,6 +11,10 @@ from sklearn.preprocessing import StandardScaler
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
+import time
+
+# Save the start time of the file execution
+start_time = time.time()
 
 # Create DataFrame by reading the dataset_1.csv
 df = pd.read_csv('../dataset/dataset_1.csv')
@@ -71,3 +75,5 @@ plt.savefig('confusion_matrix.png')
 
 # Show the confusion_matrix
 plt.show()
+
+print("--- %s seconds ---" % (time.time() - start_time))
