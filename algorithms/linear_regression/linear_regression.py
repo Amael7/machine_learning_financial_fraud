@@ -4,6 +4,10 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 import seaborn as sns
+import time
+
+# Save the start time of the file execution
+start_time = time.time()
 
 # Create DataFrame by reading the dataset_1.csv
 df = pd.read_csv('../../dataset/cleaned_dataset.csv')
@@ -38,3 +42,5 @@ plt.title('Linear Regression - Predicted vs. Actual')
 plt.xlabel('Actual Values')
 plt.ylabel('Predicted Values')
 plt.show()
+
+print("--- %s seconds ---" % (time.time() - start_time))
