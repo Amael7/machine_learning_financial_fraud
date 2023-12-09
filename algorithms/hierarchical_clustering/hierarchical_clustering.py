@@ -9,8 +9,8 @@ import time
 # Save the start time of the file execution
 start_time = time.time()
 
-# Create DataFrame by reading the dataset_1.csv
-df = pd.read_csv('../../dataset/cleaned_dataset.csv')
+# Create DataFrame by reading the original_dataset.csv
+df = pd.read_csv('../../dataset/synthetic_dataset.csv')
 
 # Set X data (no y since Hierarchical Clustering is unsupervised)
 X = df.drop('isFraud', axis=1)

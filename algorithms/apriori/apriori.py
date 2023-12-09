@@ -6,8 +6,8 @@ import time
 # Save the start time of the file execution
 start_time = time.time()
 
-# Create DataFrame by reading the dataset_1.csv
-df = pd.read_csv('../../dataset/cleaned_dataset.csv')
+# Create DataFrame by reading the original_dataset.csv
+df = pd.read_csv('../../dataset/synthetic_dataset.csv')
 
 # Assume the dataset is in a transactional format where each row represents a transaction
 transactions = df.applymap(str).values.tolist()
