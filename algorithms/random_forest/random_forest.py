@@ -10,7 +10,7 @@ import time
 start_time = time.time()
 
 # Load cleaned dataset
-df = pd.read_csv('../../dataset/cleaned_dataset.csv')
+df = pd.read_csv('../../dataset/synthetic_dataset.csv')
 
 # Set X and y data
 X = df.drop('isFraud', axis=1)

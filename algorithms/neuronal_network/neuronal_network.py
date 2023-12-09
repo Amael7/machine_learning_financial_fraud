@@ -16,8 +16,8 @@ import time
 # Save the start time of the file execution
 start_time = time.time()
 
-# Create DataFrame by reading the dataset_1.csv
-df = pd.read_csv('../dataset/dataset_1.csv')
+# Create DataFrame by reading the original_dataset.csv
+df = pd.read_csv('../dataset/original_dataset.csv')
 
 # Initialize the LabelEncoder
 le = LabelEncoder()
