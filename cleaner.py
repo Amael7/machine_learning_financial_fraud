@@ -60,10 +60,10 @@ if __name__ == "__main__":
     # 2.Synthetic
     synthetic_data = create_synthetic_dataset(cleaned_data)
 
-    # # 3.Missing_values
+    # 3.Missing_values
     missing_data = create_dataset_with_missing_data(cleaned_data)
 
-    # # Save them on new CSV files
+    # Save them on new CSV files
     cleaned_data.to_csv("dataset/cleaned_dataset.csv", index=False)
     large_data.to_csv("dataset/large_dataset.csv", index=False)
     synthetic_data.to_csv("dataset/synthetic_dataset.csv", index=False)
